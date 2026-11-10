@@ -61,41 +61,26 @@ Ejecuta este archivo desde la carpeta principal con:
     python -m ejercicio_03.ejercicio_03
 """
 
-from ejercicio_02.ejercicio_02 import contar_desde_limite
-
 
 def reporte_grupos(grupos, nota_minima=60):
-    reporte = []
-    for numero_grupo, notas in enumerate(grupos, start=1):
-        cantidad = len(notas)
-        aprobados = contar_desde_limite(notas, nota_minima)
-        reprobados = cantidad - aprobados
-        
-        reporte.append({
-            "grupo": numero_grupo,
-            "cantidad": cantidad,
-            "aprobados": aprobados,
-            "reprobados": reprobados
-        })
-    
-    return reporte
+    pass
 
 
 # ---------------------------------------------------------------------
 # Preguntas de análisis (responde debajo de cada pregunta)
 # ---------------------------------------------------------------------
 # 1. ¿Qué devuelve enumerate() en cada iteración?
-# Devuelve una tupla de dos elementos: un entero que representa el índice o contador del elemento actual (iniciado en este caso en 1 por start=1) y la sublista correspondiente a las notas de ese grupo.
+#
 #
 # 2. ¿Qué parte del problema resuelve el ciclo?
-# Resuelve la iteración sobre la estructura principal (la lista de grupos), controlando la numeración consecutiva de cada grupo y construyendo secuencialmente la lista final con los diccionarios formateados.
+#
 #
 # 3. ¿Qué parte resuelve la función recursiva?
-# Resuelve el conteo individual de calificaciones que son mayores o iguales a la nota_minima (los aprobados) dentro de la lista de notas de cada grupo.
+#
 #
 # 4. ¿Por qué un grupo vacío debe aparecer en el reporte aunque no tenga
 #    estudiantes?
-# Porque un grupo vacío es un grupo existente en los registros institucionales (ocupa una posición/matrícula) y su reporte refleja fielmente su estado actual: 0 estudiantes, 0 aprobados y 0 reprobados. Omitirlo alteraría el orden y la numeración consecutiva de los grupos subsiguientes.
+#
 #
 
 
